@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Features = () => {
+const Features = ({learn}) => {
+    console.log(learn)
     return (
-        <div>
-            
+        <div className='text-left'>
+            <li>{learn}</li>
         </div>
     );
 };
