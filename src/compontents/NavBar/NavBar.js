@@ -17,13 +17,13 @@ const NavBar = () => {
     ]
     return (
         <nav className="w-full bg-black lg:bg-blue-500 py-2">
-            <div onClick={() => setOpen(!open)} className="text-3xl h-6 w-6 text-white font-semibold md:hidden ">
+            <div onClick={() => setOpen(!open)} className="text-3xl h-6 w-6 text-white font-semibold md:hidden z-10 relative">
             {
                 open ? <XMarkIcon/> : <Bars3Icon/>
             }
             </div>
 
-            <ul className={`md:flex bg-black md:bg-inherit w-full text-white p-6 lg:p-0 justify-center absolute duration-700 ease-in md:static ${open ? 'right-0':'right-[-1240px]'}`}>
+            <ul className={`md:flex bg-black md:bg-inherit w-full text-white p-6 lg:p-0 justify-center absolute duration-500 ease-in md:static ${open ? 'top-0':'top-[-1240px]'}`}>
                 {
                     navBars.map(nav => <NavLink 
                             key={nav.id} navList={nav}
